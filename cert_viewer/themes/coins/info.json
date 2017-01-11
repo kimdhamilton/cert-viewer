@@ -1,0 +1,9 @@
+{
+  "application": "cert_viewer",
+  "identifier": "coins",
+  "name": "Media Lab Coins",
+  "author": "MIT Media Lab",
+  "license": "MIT",
+  "description": "The original Media Lab Coins styling",
+  "version": "1.0.0"
+}

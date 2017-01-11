@@ -1,0 +1,33 @@
+{% extends theme("layout.html") %}
+
+{% block title %}ML Coins{% endblock %}
+
+{% block css %}
+    <link rel=stylesheet type=text/css href="{{ theme_static('css/index.css') }}">
+    <link rel=stylesheet type=text/css href="{{ theme_static('css/faq.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-2 col-sm-2 col-xs-4">
+    <img src="{{ theme_static('img/mllogo.png') }}" class="img-responsive" alt="MIT Media Lab"/>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-8 col-xs-12">
+    <h3 class="heading font-bold name">Media Lab Coins <br> FAQ</h3>
+    <h5 class="faq-title"><strong> What are the coins? </strong></h5>
+    <p class="description font-light faq-text">
+        We are creating metal challenge coins for all alums. They are a sign of membership in the Media Lab community, and we are interested in exploring other (non financial) uses, for example as a currency for appreciation or gratitude.
+    </p>
+    <h5 class="faq-title"><strong> Are the poker chips the same as the coins?</strong></h5>
+    <p class="description font-light faq-text">
+        No, the chips are just placeholders containing the URL where the actual coins can be requested.
+    </p>
+    <h5 class="faq-title"><strong>What are the digital certificates?</strong></h5>
+    <p class="description font-light faq-text">
+        In essence, they are digital representations of the coins. Technically, we create a JSON that contains the certificate information, then sign and hash it, and place the hash on the Bitcoin blockchain. 
+    </p>     
+  </div>
+</div>
+{% endblock %}

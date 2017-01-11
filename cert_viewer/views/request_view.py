@@ -6,7 +6,7 @@ from flask import (url_for, redirect)
 from flask.views import MethodView
 
 from cert_viewer import helpers
-from cert_viewer.forms import BitcoinForm, SimpleRegistrationForm
+from cert_viewer.forms import BitcoinForm, ExtendedRegistrationForm
 from cert_viewer.notifier import Notifier
 from cert_viewer.views.__init__ import render
 
@@ -14,7 +14,7 @@ TEMPLATE = 'request.html'
 
 class RequestView(MethodView):
     def post(self):
-        recipient_form = SimpleRegistrationForm(request.form)
+        recipient_form = ExtendedRegistrationForm(request.form)
         if recipient_form.validate():
             user_data = recipient_form.to_user_data()
             from cert_viewer import introduction_store_bridge
@@ -44,7 +44,7 @@ class RequestView(MethodView):
     def get(self):
         """Request an introduction. Forwarding to intro endpoint for backcompat"""
 
-        recipient_form = SimpleRegistrationForm(request.form)
+        recipient_form = ExtendedRegistrationForm(request.form)
         bitcoin_form = BitcoinForm(request.form)
 
         return render(TEMPLATE, form=recipient_form, registered=False, bitcoin=bitcoin_form)

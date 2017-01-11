@@ -10,8 +10,9 @@ from cert_viewer import introduction_store_bridge
 from cert_viewer import verifier
 
 DEFAULT_THEME = 'default'
-GUID_REGEX = '[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}'
-
+#TODO
+GUID_REGEX = '([0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}|[0-9a-fA-F]{24})'
+#GUID_REGEX = '.*'
 
 def update_app_config(app, config):
     app.config.update(
