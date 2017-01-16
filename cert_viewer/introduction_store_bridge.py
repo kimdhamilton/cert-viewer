@@ -3,7 +3,7 @@ class IntroStore(object):
         self.intro_db = intro_db
 
     def insert(self, intro):
-        self.intro_db.introductions.insert_one(intro)
+        self.intro_db.recipients.insert_one(intro)
 
 
 def insert_introduction(introduction):

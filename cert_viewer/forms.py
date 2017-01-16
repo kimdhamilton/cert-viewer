@@ -82,8 +82,7 @@ class ExtendedRegistrationForm(Form):
             validators.required(), validators.length(
                 max=200)])
     degree = RadioField('Degree',
-                        choices=[('option1', 'Option 1'), ('option2',
-                                                           'Option 2'), ('other', 'It\'s complicated')],
+                        choices=[('mas-ms', 'MAS MS'), ('mas-phd', 'MAS PhD'), ('other', 'It\'s complicated')],
                         coerce=get_coerce_val())
     comments = TextAreaField('Comments', [validators.optional()])
 
